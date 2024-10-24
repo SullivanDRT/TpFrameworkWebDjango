@@ -1,0 +1,16 @@
+{% include 'bonnes_lectures/header.html' %}
+    <h1>Détails du Livre</h1>
+    <div class = "card">
+        <div class = "card-body">
+            <h2 class = "card-title">Titre : {{ book.titre }}</h2>
+            <h2>Auteur : {{ book.publisher }}</h2>
+            <p>Date : {{ book.year }}</p>
+            <p>Résumé : {{ book.backCover }}</p>
+            <p>ISBN : {{ book.isbn }}</p>
+            <p>Cover : {{ book.cover }}</p>
+        </div>
+    </div>
+    <a href="{% url 'books' %}" class = "btn">Retour à la liste des livres</a>
+    <a href="{% url 'supprimer_livre' book.id %}" class = "btn bg-danger">Supprimer Le Livre</a>
+    <a href="{% url 'modifier_livre' book.id %}" class = "btn bg-warning">Modifier Le Livre</a>
+    

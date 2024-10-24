@@ -1,0 +1,28 @@
+{% include 'bonnes_lectures/header.html' %}
+<form method="post">
+    {% csrf_token %}
+    <fieldset>
+        <legend>Livre</legend>
+        <ul>
+            <li>
+                {{ form.titre.label_tag }} {{ form.titre}}
+            </li>
+            <li>
+                {{ form.publisher.label_tag }} {{ form.publisher}}
+            </li>
+            <li>
+                {{ form.year.label_tag }} {{ form.year}}
+            </li>
+            <li>
+                {{ form.isbn.label_tag }} {{ form.isbn}}
+            </li>
+            <li>
+                {{ form.backCover.label_tag}} {{form.backCover}}
+            </li>
+            <li>
+                {{ form.cover.label_tag}} {{form.cover}}
+            </li>
+        </ul>
+    </fieldset>
+    <button type="submit">Ajouter Le Livre</button> 
+</form>

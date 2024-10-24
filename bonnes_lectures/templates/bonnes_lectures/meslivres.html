@@ -1,0 +1,9 @@
+{% include 'bonnes_lectures/header.html' %}
+<h1>Mes Livres</h1>
+{% for book in books %}
+<div>
+    <h2>Titre : {{ book.titre }}</h2>
+    <h2>Auteur : {{ book.publisher }}</h2>
+    <p><a href="{% url 'book_detail' book.id %}">Voir Détail</a></p>
+</div>
+{% endfor %}
